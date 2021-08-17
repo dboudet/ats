@@ -6,8 +6,8 @@ app.use(express.json())
 
 const { getAllApplicants } = require("./src/applicants")
 
-// app.get("/ats/applicants/:applicantId", getSingleApplicant)
 app.get("/ats/applicants", getAllApplicants)
+// app.get("/ats/applicants/:applicantId", getSingleApplicant)
 // app.post("/ats/new-applicant", createApplicant)
 // app.patch("/ats/applicants/:applicantId", updateApplicant)
 
@@ -15,6 +15,6 @@ app.get("/ats/applicants", getAllApplicants)
 // app.post("/ats/new-user", createUser)
 // app.patch("/ats/user/:userId", updateUser)
 
-app.listen(3066, () => {
-  console.log("Listening on port 3066 ...")
+app.listen(3306, () => {
+  console.log("Listening on port 3306 ...")
 })
