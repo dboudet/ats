@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 dbconfig.js
 aws-react-app-node-api.cer
+uploadToS3.js
