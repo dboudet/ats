@@ -69,12 +69,9 @@ exports.updateApplicant = (req, res) => {
       email = "${formData.email}", 
       position = "${formData.position}", 
       notes = "${formData.notes}",
-      rating_1 = "${formData.rating1}",
-      rating_2 = "${formData.rating2}",
-      rating_3 = "${formData.rating3}",
-      rating_4 = "${formData.rating4}",
-      rating_5 = "${formData.rating5}"
-    WHERE id = "${formDatalid}";`,
+      score = ${formData.score},
+      application_stage = ${formData.applicationStage}
+    WHERE id = ${formData.id};`,
     (err, rows) => {
       if (err) {
         console.log(err)
