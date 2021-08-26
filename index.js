@@ -9,10 +9,14 @@ const {
   getApplicantById,
   addNewApplicant,
   updateApplicant,
+  getApplicantSearchQuery,
 } = require("./src/applicants")
 
 app.patch("/ats/applicants/update/:applicantId", updateApplicant)
+
 app.post("/ats/new-applicant", addNewApplicant)
+
+app.get("/ats/search/:searchQuery", getApplicantSearchQuery)
 app.get("/ats/applicants/:applicantId", getApplicantById)
 app.get("/ats/applicants", getAllApplicants)
 

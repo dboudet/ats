@@ -32,6 +32,24 @@ exports.getApplicantById = (req, res) => {
   db.end()
 }
 
+exports.getApplicantSearchQuery = (req, res) => {
+  const db = mysql.createConnection(dbconfig)
+  db.connect()
+  const { searchQuery } = req.params
+  db.query(
+    `SELECT * FROM applicants WHERE first_name LIKE '%${searchQuery}%' OR last_name LIKE '%${searchQuery}%';`,
+    (err, rows) => {
+      if (err) {
+        console.log(err)
+        res.status(500).send(err)
+        return
+      }
+      res.send(rows)
+    }
+  )
+  db.end()
+}
+
 exports.addNewApplicant = (req, res) => {
   const db = mysql.createConnection(dbconfig)
   db.connect()
