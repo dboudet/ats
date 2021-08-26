@@ -16,9 +16,9 @@ app.post("/ats/new-applicant", addNewApplicant)
 app.get("/ats/applicants/:applicantId", getApplicantById)
 app.get("/ats/applicants", getAllApplicants)
 
-// app.get("/ats/user/:userId", getUserById)
-// app.post("/ats/new-user", createUser)
-// app.patch("/ats/user/:userId", updateUser)
+// app.get("/ats/login", userLogin)
+// app.post("/ats/add-user", addUser)
+// app.patch("/ats/update-profile", updateUser)
 
 app.listen(3306, () => {
   console.log("Listening on port 3306 ...")
